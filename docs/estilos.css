@@ -1,1 +1,133 @@
+/* Marquesina estilo librería antigua */
+.marquee {
+  width: 90%;
+  margin: 40px auto;
+  overflow: hidden;
+  border: 4px double #a67c52;
+  background-color: #fdf6e3;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 12px;
+}
+.titulo-desplazable {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 3rem;
+  color: #5a3e2b;
+  font-family: 'Playfair Display', serif;
+  animation: desplazamiento 14s linear infinite;
+  letter-spacing: 2px;
+}
+@keyframes desplazamiento {
+  0% { transform: translateX(100vw); }
+  100% { transform: translateX(-100vw); }
+}
+
+
+/* Fondo tipo papel antiguo */
+body {
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #fef9f1;
+  background-image: url('img/papel-textura.jpg'); /* opcional */
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+/* Catálogo en cuadrícula con aire clásico */
+#catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 40px;
+}
+
+
+/* Tarjetas estilo postal antigua */
+.producto-card {
+  background-color: #fffaf0;
+  border: 2px solid #c2a77d;
+  border-radius: 16px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+.producto-card:hover {
+  transform: scale(1.03);
+}
+
+
+/* Decoración superior tipo etiqueta */
+.producto-card::before {
+  content: "✦ Libro Clásico ✦";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #e8d8c3;
+  padding: 5px 15px;
+  font-size: 0.8em;
+  color: #5a3e2b;
+  border-radius: 8px;
+  font-family: 'Garamond', serif;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+/* Imágenes con marco suave */
+.producto-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #d8c3a5;
+}
+
+
+/* Título del libro */
+.producto-card h2 {
+  font-size: 1.6em;
+  margin: 15px 0 10px;
+  color: #5a3e2b;
+  font-weight: bold;
+}
+
+
+/* Descripción */
+.producto-card p {
+  color: #7a6e57;
+  font-size: 1em;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+
+/* Precio con estilo elegante */
+.precio {
+  font-size: 1.4em;
+  color: #8b5e3c;
+  font-weight: bold;
+  margin: 15px 0;
+  display: block;
+}
+
+
+/* Botón de compra estilo etiqueta */
+.btn-comprar {
+  background-color: #a67c52;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Garamond', serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.btn-comprar:hover {
+  background-color: #6e4b2a;
+}
 
